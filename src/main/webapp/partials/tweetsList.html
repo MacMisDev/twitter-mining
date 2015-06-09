@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div>
+            <img class="spinner" ng-show="loading" src="img/spinner.gif" />
+            <button class="btn btn-default" type="button" ng-click="fetchTweets()" ng-show="fetching">Fetch tweets</button>
+            <ul class = "tweets">
+                <li ng-repeat="tweet in tweets" class="positive-{{ tweet.positive }}">
+                    <p><b><a ng-href="https://twitter.com/{{tweet.authorNickname}}" >{{tweet.author}}</a></b> @{{tweet.authorNickname}} - {{tweet.date}}</p>
+                    <p>{{tweet.text}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
